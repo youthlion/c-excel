@@ -2,6 +2,24 @@
 #include<string>
 using namespace std;
 
+class People
+{
+private:
+	string name;
+	int idNum;
+	string address;
+	string sex;
+public:
+	People(string na,string se,int id,string ad)
+	{
+		name=na;
+		sex=se;
+		idNum=id;
+		address=ad;
+	}
+	
+}
+
 class Student
 {
 private:
@@ -18,6 +36,8 @@ public:
 		cout<<"name:"<<name<<"num:"<<num;
 	}
 };
+
+
 
 int main()
 {
