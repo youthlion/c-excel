@@ -2,46 +2,29 @@
 #include<string>
 using namespace std;
 
-class People
+class Score_system
 {
-private:
-	string name;
-	int idNum;
-	string address;
-	string sex;
-public:
-	People(string na,string se,int id,string ad)
-	{
-		name=na;
-		sex=se;
-		idNum=id;
-		address=ad;
-	}
-	
+	private:
+		class Math;
+		class English;
+		class Physical;
+		class Marx;
+		class Cpp;
+		class Current_affairs;
+		class Employ;
+		class Cad;
+		class 
 }
 
-class Student
+class Various_sub
 {
-private:
-	int num;
-	string name;
-public:
-	Student(int nu,string na)
-	{
-		num=nu;
-		name=na;
-	}
-	void disp()
-	{
-		cout<<"name:"<<name<<"num:"<<num;
-	}
-};
-
-
-
-int main()
-{
-	Student s(17,"zhang");
-	s.disp();
-	return 0;
+	Private:
+		int dai_score;
+		int fin_score;
+	public:
+		Score_system(int da,int fi)
+		{
+			dai_score=da;
+			fin_score=fi;
+		}
 }
