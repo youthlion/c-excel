@@ -31,13 +31,22 @@ class People
 		{
 			cout<<"name:"<<name<<" num:"<<num<<" class num:"<<class_num<<endl;
 		}
+		ostream &operator<<(ostream &os,People &p)
+		{
+			os<<"name:"<<p.name<<" num:"<<p.num<<" class num:"<<p.class_num<<endl;
+			return os;
+		}
+		istream &operator>>(istream &is,People &p)
+		{
+			is>>p.name>>p.num>>p.class_num;
+			return is;
+		}
 };
+
+
 
 int main()
 {
 	People p;
-	p.disp();
-	People a("John",1,1);
-	a.disp();
-	return 0;
+	cout<<p<<endl;
 }
