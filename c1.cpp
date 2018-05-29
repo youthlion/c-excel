@@ -145,9 +145,16 @@ int main()
 
 
 template <typename T>
-T function(T a,T b)
+T add(T a,T b)
 {
-	
+	return a+b;
+}
+
+int main()
+{
+	cout<<add<int>(1,2)<<endl;
+	cout<<add<double>(1.2,1.8)<<endl;
+	return 0;
 }
 
 
