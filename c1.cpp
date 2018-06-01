@@ -143,6 +143,8 @@ int main()
 
 */
 
+/*
+关于模板的声明以及实例化，模板就是定义类型，然后使用这个类型，例如 
 
 template <typename T>
 T add(T a,T b)
