@@ -47,6 +47,7 @@ int main()
 }
 */
 
+/*
 class Circle
 {
 	private:
@@ -79,5 +80,34 @@ int main()
 	c.setr(rr);
 	cout<<"r:"<<c.getr()<<endl;
 	cout<<"area:"<<c.area()<<" perimeter:"<<c.perimeter()<<endl;
+	return 0;
+}
+*/
+
+class Point
+{
+	private:
+		int x;
+		int y;
+	public:
+		void set(int xx,int yy)
+		{
+			x=xx;
+			y=yy;
+		}
+		void printinfo()
+		{
+			cout<<"x:"<<x<<" y:"<<y<<endl;
+		}
+};
+
+int main()
+{
+	Point p;
+	int x,y;
+	cout<<"First input x,then y:"<<endl;
+	cin>>x>>y;
+	p.set(x,y);
+	p.printinfo();
 	return 0;
 }
