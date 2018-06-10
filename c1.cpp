@@ -82,7 +82,7 @@ class Student
 		{}
 };
 
-void highestscore(Student &s,int n)
+void highestscore(Student &s[],int n)
 {
 	int max=s[0].score;
 	for (int i=0;i<n;i++)
