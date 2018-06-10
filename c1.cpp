@@ -1,113 +1,96 @@
 #include<iostream>
 #include<string>
+#include<cmath>
 using namespace std;
 
-/*类的定义和使用 
-class Student
-{
-	private:
-		string name;
-		int num;
-	public:
-		void setname(string na)
-		{
-			name=na;
-		}
-		string getname()
-		{
-			return name;
-		}
-		void setnum(int nu)
-		{
-			num=nu;
-		}
-		int getnum()
-		{
-			return num;
-		}
-	    void printinfo()
-	    {
-	    	cout<<"name:"<<name<<" num:"<<num;
-		}
-};
-
-
-int main()
-{
-	Student stu;
-	string na;
-	int nu;
-	cout<<"please input name:"<<endl;
-	cin>>na;
-	cout<<"please input num:"<<endl;
-	cin>>nu;
-	stu.setname(na);
-	stu.setnum(nu);
-	stu.printinfo();
-}
-*/
-
 /*
-class Circle
+第一题：类的组合 
+class point
 {
 	private:
-		int r;
+		int x,y;
 	public:
-		void setr(int rr)
-		{
-			r=rr;
-		}
-		int getr()
-		{
-			return r;
-		}
-		int area()
-		{
-			return 3.14*r*r;
-		}
-		int perimeter()
-		{
-			return 3.14*2*r;
-		}
-};
-
-int main()
-{
-	Circle c;
-	int rr;
-	cout<<"please input r:"<<endl;
-	cin>>rr;
-	c.setr(rr);
-	cout<<"r:"<<c.getr()<<endl;
-	cout<<"area:"<<c.area()<<" perimeter:"<<c.perimeter()<<endl;
-	return 0;
-}
-*/
-
-class Point
-{
-	private:
-		int x;
-		int y;
-	public:
-		void set(int xx,int yy)
+		point(int xx,int yy)
 		{
 			x=xx;
 			y=yy;
 		}
-		void printinfo()
+		point()
 		{
-			cout<<"x:"<<x<<" y:"<<y<<endl;
 		}
+		void setx(int value)
+		{
+			x=value;
+		}
+		int getx()
+		{
+			return x;
+		}
+		void sety(int value)
+		{
+			y=value;
+		}
+		int gety()
+		{
+			return y;
+		}
+};
+
+class line:public point 
+{
+	private:
+		point p1,p2;
+	public:
+		line(int px1,int px2,int py1,int py2):p1(px1,py1),p2(px2,py2)
+		{
+		}
+		double getlength()
+		{
+			return sqrt((p1.getx()-p2.getx())*(p1.getx()-p2.getx())+(p1.gety()-p2.gety())*(p1.gety()-p2.gety()));
+		}
+		~line()
+		{
+		}
+		
 };
 
 int main()
 {
-	Point p;
-	int x,y;
-	cout<<"First input x,then y:"<<endl;
-	cin>>x>>y;
-	p.set(x,y);
-	p.printinfo();
+	line l(1,2,3,4);
+	cout<<l.getlength()<<endl;
 	return 0;
 }
+*/
+
+class Student
+{
+	private:
+		string name;
+		int score;
+	public:
+		Student(string na,int sc)
+		{
+			name=na;
+			score=sc;
+		}
+		Student(Student &s)
+		{
+			name=s.name;
+			score=s.score;
+		}
+		~Student
+		{
+		}
+};
+
+void highestscore(student s[])
+{
+	
+}
+
+int main()
+{
+	Student s[N];
+	
+}
+
