@@ -79,8 +79,7 @@ class Student
 		}
 		friend void highestscore(Student &s[],int n);
 		~Student()
-		{
-		}
+		{}
 };
 
 void highestscore(Student &s,int n)
@@ -96,7 +95,7 @@ void highestscore(Student &s,int n)
 
 int main()
 {
-	Student s[5]={("John",88),("Bob",89),("Youth",78),("Tom",99),("Jam",75)};
+	Student s[5]={Student("John",88),Student("Bob",89),Student("Youth",78),Student("Tom",99),Student("Jam",75)};
 	highestscore(s[5]);
 }
 
