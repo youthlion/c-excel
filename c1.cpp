@@ -77,25 +77,14 @@ class Student
 			name=s.name;
 			score=s.score;
 		}
-		friend void highestscore(Student &s[],int n);
 		~Student()
 		{}
 };
 
-void highestscore(Student &s[],int n)
-{
-	int max=s[0].score;
-	for (int i=0;i<n;i++)
-	    {
-	    	if (max<s[i].score)
-	    	    max=s[i].score;
-		}
-	cout<<"highestscore is:"<<max<<endl;
-}
 
 int main()
 {
-	Student s[5]={Student("John",88),Student("Bob",89),Student("Youth",78),Student("Tom",99),Student("Jam",75)};
-	highestscore(s[5]);
+	
+	return 0;
 }
 
