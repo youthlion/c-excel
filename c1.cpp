@@ -1,6 +1,5 @@
 #include<iostream>
 #include<string>
-#include<cmath>
 using namespace std;
 
 /*
@@ -78,19 +77,26 @@ class Student
 			name=s.name;
 			score=s.score;
 		}
-		~Student
+		friend void highestscore(Student &s[],int n);
+		~Student()
 		{
 		}
 };
 
-void highestscore(student s[])
+void highestscore(Student &s,int n)
 {
-	
+	int max=s[0].score;
+	for (int i=0;i<n;i++)
+	    {
+	    	if (max<s[i].score)
+	    	    max=s[i].score;
+		}
+	cout<<"highestscore is:"<<max<<endl;
 }
 
 int main()
 {
-	Student s[N];
-	
+	Student s[5]={("John",88),("Bob",89),("Youth",78),("Tom",99),("Jam",75)};
+	highestscore(s[5]);
 }
 
