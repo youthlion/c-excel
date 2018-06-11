@@ -345,22 +345,27 @@ class complex
 		{
 			return complex((real-c.real),(image-c.image));
 		}
-		complex & operator++()
+		complex operator++()
 		{
 			return complex(real++,image++);
 		}
-		complex & operator++(int i)
+		complex operator++(int i)
 		{
-			complex c;
-			c=(*this);
+			complex c=(*this);
 			(*this)++;
 			return c;
 		}
-		complex & operator--()
+		complex operator--()
 		{
 			real--;
 			image--;
 			return complex(real,image);
+		}
+		complex operator--(int i)
+		{
+			complex c=(*this);
+			(*this)--;
+			return c;
 		}
 };
 
