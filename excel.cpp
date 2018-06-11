@@ -3,6 +3,7 @@
 #include<cmath>
 using namespace std;
 
+/*first problem
 class point
 {
 	private:
@@ -62,7 +63,7 @@ int main()
 	return 0;
 }
 
-
+*/
 
 /*   Second problem
 class Student
@@ -247,7 +248,132 @@ int main()
 */
 
 
+/* not finished sixth probelm
+class vehicle
+{
+	private:
+		double weight;
+	public:
+		vahicle(double we)
+		{
+			weight=we;
+		}
+		virtual void display()
+		{
+			cout<<"weight:"<<weight<<endl;
+		}
+		~vahicle()
+		{}
+};
 
+
+class car:public vehicle
+{
+	private:
+		int personnum;
+	public:
+		car(double we,int pe):vehicle(we)
+		{
+			personnum=pe;
+		}
+		void display()
+		{
+			cout<<"person num:"<<personnum<<endl;
+		}
+		~car()
+		{}
+};
+
+
+class truck:public vehicle
+{
+	private:
+		double load;
+	public:
+		truck(double we,double lo):vehicle(we)
+		{
+			load=lo;
+		}
+		void display()
+		{
+			cout<<"load:"<<load<<endl;
+		}
+		~truck()
+		{}
+};
+
+class pickup:public car,public truck
+{
+	public:
+		pickup(double we,int pe,double lo):car(we,pe),truck(we,lo)
+		{}
+		void display()
+		{
+			car::display();
+			truck::display();
+		}
+};
+
+int main()
+{
+	pickup p(1000,5,500);
+	p.display();
+	return 0;
+}
+*/
+
+class complex
+{
+	private:
+		int real;
+		int image;
+	public:
+		complex(int re,int im)
+		{
+			real=re;
+			image=im;
+		}
+		void display()
+		{
+			cout<<"real:"<<real<<" image:"<<image<<endl;
+		}
+		complex operator+(complex &c)
+		{
+			return complex((real+c.real),(image+c.image));
+		}
+		complex operator-(complex &c)
+		{
+			return complex((real-c.real),(image-c.image));
+		}
+		complex & operator++()
+		{
+			return complex(real++,image++);
+		}
+		complex & operator++(int i)
+		{
+			complex c;
+			c=(*this);
+			(*this)++;
+			return c;
+		}
+		complex & operator--()
+		{
+			real--;
+			image--;
+			return complex(real,image);
+		}
+};
+
+int main()
+{
+	complex c(1,2);
+	c.display();
+	c++;
+	c.display();
+	c--;
+	c.display();
+	return 0;
+}
 	
 
 		
