@@ -61,6 +61,8 @@ int main()
 }
 */
 
+
+/*类数组定义以及作为函数参数的使用方法。 
 class Student
 {
 	private:
@@ -87,4 +89,10 @@ int main()
 	
 	return 0;
 }
+
+*/
+
+
+
+class  
 
