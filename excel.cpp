@@ -373,10 +373,7 @@ int main()
 {
 	complex c(1,2);
 	c.display();
-	c++;
-	c.display();
-	c--;
-	c.display();
+	
 	return 0;
 }
 	
